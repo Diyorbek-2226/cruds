@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 
 import Header from './Header';
-import Table from './Table';
+
 import Add from './Add';
-import Edit from './Edit';
+
 
 import { employeesData } from '../../data';
 
@@ -71,14 +71,7 @@ const Dashboard = ({ setIsAuthenticated }) => {
           setIsAdding={setIsAdding}
         />
       )}
-      {isEditing && (
-        <Edit
-          employees={employees}
-          selectedEmployee={selectedEmployee}
-          setEmployees={setEmployees}
-          setIsEditing={setIsEditing}
-        />
-      )}
+    
     </div>
   );
 };
